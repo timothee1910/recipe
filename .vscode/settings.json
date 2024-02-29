@@ -1,0 +1,8 @@
+{
+    "php.validate.executablePath": "./.vscode/php.sh",
+    "files.associations": {
+      ".env": "properties",
+      ".env.local": "properties",
+      ".env.test": "properties"
+    }
+  }

@@ -1,0 +1,4 @@
+App\Entity\Item:
+  item_{1..10}:
+    name: <text(30)>
+    amount: <numberBetween(10,100)>

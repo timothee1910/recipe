@@ -1,0 +1,16 @@
+services:
+  app_recipe:
+    build:
+      args:
+        - SYMFONY_ENV=dev
+    volumes:
+      - ./:/var/www/project/:cached
+    labels:
+      - "traefik.http.routers.recipe.rule=Host(`local.services-recipe.fr`)"
+      - traefik.http.routers.recipe.entrypoints=http
+      - traefik.http.services.recipe.loadbalancer.server.port=80
+    environment:
+      - SYMFONY_ENV=dev
+    networks:
+      - traefik
+      - symfony
